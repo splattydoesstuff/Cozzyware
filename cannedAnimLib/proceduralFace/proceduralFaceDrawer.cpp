@@ -678,8 +678,8 @@ void ProceduralFaceDrawer::LoadCustomEyePNG()
       {
         ANKI_CPU_PROFILE("DrawEyePixels");
 
- 	const bool scanlineEnabled = kProcFace_Scanlines && faceData.GetScanlineOpacity() > 0.0f;
-	const f32 scanlineOpacity = faceData.GetScanlineOpacity();
+ 	const bool scanlineEnabled = false;
+	const f32 scanlineOpacity = 0.0f;
 
         DEV_ASSERT_MSG(upperLeft.y()>=0 && bottomRight.y()<faceImg.GetNumRows(), "ProceduralFaceDrawer.DrawEye.BadRow", "%f %f", upperLeft.y(), bottomRight.y());
         DEV_ASSERT_MSG(upperLeft.x()>=0 && bottomRight.x()<faceImg.GetNumCols(), "ProceduralFaceDrawer.DrawEye.BadCol", "%f %f", upperLeft.x(), bottomRight.x());
