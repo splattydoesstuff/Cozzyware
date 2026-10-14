@@ -1,7 +1,11 @@
-# Viccyware-tester
+# Viccyware-tester for Cozmo
 
-Welcome to the unstable branch of `Viccyware`. This is the home of a modified copy of the Vector source
+Welcome to the unstable branch of `Cozzyware`. This is the home of a modified copy of the Vector source
 code. Original README: [README-orig.md](/README-orig.md)
+
+This is a modified version of Viccyware, a Custom Firmware for Vector that brings the fun of Cozmo to said robot that allows Cozmo owners to render their Cozmo autonomous without leaving their favorite personality behind.
+
+Patches at the moment include eye-design fixes to allow proper display onto Cozmo's OLED display.
 
 Learn a little more about the project at [vicw.froggitti.net](https://vicw.froggitti.net/)
 
@@ -14,7 +18,7 @@ This branch of the Vector source code will attempt to reimpliment Cozmo from old
 
 ## Building
 
-`Viccyware` can be built standalone on most Linux distros (arm64 or amd64), and on macOS (arm64 only, for now).
+`Cozzyware` can be built standalone on most Linux distros (arm64 or amd64), and on macOS (arm64 only, for now).
 
 For Linux, the Docker method is recommended for now (especially if you have a weird or old Linux distro installed), though bare metal works nicely too.
 
@@ -32,8 +36,8 @@ Click an option below for instructions.
 
 ```
 cd ~
-git clone --recurse-submodules https://github.com/The-Viccyware-Group/Viccyware -b Viccyware-tester
-cd Viccyware
+git clone --recurse-submodules https://github.com/splattydoesstuff/Cozzyware -b Viccyware-tester
+cd Cozzyware
 ```
 
 2. Make sure you can run Docker as a normal user. This will probably involve:
@@ -48,7 +52,7 @@ sudo chmod 660 /var/run/docker.sock
 
 3. Run the build script:
 ```
-cd ~/Viccyware
+cd ~/Cozzyware
 ./build/build-v.sh
 ```
 
@@ -74,8 +78,8 @@ sudo dnf install -y git wget curl openssl ninja-build gcc gcc-c++ pkgconf-pkg-co
 
 ```
 cd ~
-git clone --recurse-submodules https://github.com/The-Viccyware-Group/Viccyware -b Viccyware-tester
-cd Viccyware
+git clone --recurse-submodules https://github.com/splattydoesstuff/Cozzyware -b Viccyware-tester
+cd Cozzyware
 ```
 
 2. Source `setenv.sh`:
@@ -107,13 +111,13 @@ vbuild
 
 ```
 cd ~
-git clone --recurse-submodules https://github.com/The-Viccyware-Group/Viccyware -b Viccyware-tester
-cd Viccyware
+git clone --recurse-submodules https://github.com/splattydoesstuff/Cozzyware -b Viccyware-tester
+cd Cozzyware
 ```
 
 2. Run the build script:
 ```
-cd ~/Viccyware
+cd ~/Cozzyware
 ./build/build-v.sh
 ```
 
@@ -121,7 +125,7 @@ cd ~/Viccyware
 
 ## Deploying
 
-1. Install Viccyware on your robot.
+1. Install Cozzyware on your robot.
 2. Get your robot's IP through CCIS:
   - 1. Place your robot on the charger
   - 2. Double click the button
