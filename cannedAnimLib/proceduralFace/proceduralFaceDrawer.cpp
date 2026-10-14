@@ -66,7 +66,7 @@ namespace Vector {
 #endif
 
 #if PROCEDURALFACE_SCANLINE_FEATURE
-  CONSOLE_VAR(bool,                         kProcFace_Scanlines,              CONSOLE_GROUP, true);
+  CONSOLE_VAR(bool,                         kProcFace_Scanlines,              CONSOLE_GROUP, false);
   CONSOLE_VAR_RANGED(ProceduralFace::Value, kProcFace_DefaultScanlineOpacity, CONSOLE_GROUP, 1.f, 0.f, 1.f);
 #endif
 
@@ -755,7 +755,7 @@ void ProceduralFaceDrawer::LoadCustomEyePNG()
 
     bool dirty = false; // set to true to force all stages to render, previous pipeline
     dirty = DrawEyes(faceData, dirty);
-    dirty = ApplyScanlines(_faceCache.img8[_faceCache.finalFace], faceData.GetScanlineOpacity(), dirty);
+    //dirty = ApplyScanlines(_faceCache.img8[_faceCache.finalFace], faceData.GetScanlineOpacity(), dirty);
     dirty = DistortScanlines(faceData, dirty);
     dirty = ApplyNoise(rng, dirty);
     dirty = ConvertColorspace(faceData, output, dirty);
